@@ -13,26 +13,26 @@ $questions = [
 
 $reponses =[ 1, 2, 3, 1, 3,];
 $score = 0; // declaration d'un int nommé
-$NB_QUESTIONS = count($questions); // comptage du tableau question
+$NB_QUESTIONS = count($questions); // comptage du tableau question est égal a
 
-for($i = 0; $i < $NB_QUESTIONS; $i++){
-    echo $questions[$i]."\n";
+for($i = 0; $i < $NB_QUESTIONS; $i++){ // la boucle for va se répéter et parcourir le tableau avec une fin
+    echo $questions[$i]."\n";// chaque valeur dans le tableau question va être posés jusqu'a la dernière
     // Votre code
-    $utilisateur = trim(fgets(STDIN));
-    echo"Suspense !!\n";
-    if ($utilisateur == $reponses[$i]){ 
+    $utilisateur = trim(fgets(STDIN)); // $a est égal à la donnée du clavier
+    echo"Suspense !!\n"; // dire suspense 
+    if ($utilisateur == $reponses[$i]){  // si $a est égal à la valeur dans le tableau reponse 
         echo" C'est une bonne réponse\n";
-        echo "Le score est de ". $score += 10 ."\n";
+        echo "Le score est de ". $score += 10 ."\n";// dire le score... et ajouté 10
     
 
  }
- else{
+ else{ // sinon
     echo "C'est une mauvaise réponse\n";
     echo "Le score est de ". $score ."\n";
 
  }
  echo " Game over\n";
-echo "Pourcentage de bonne réponse : " .( $score / $NB_QUESTIONS)* 10 . "%\n";
+echo "Pourcentage de bonne réponse : " .( $score / $NB_QUESTIONS)* 10 . "%\n"; 
 echo "Bien jouer tu as gagner des millions !!!!!\n";
 
 }
